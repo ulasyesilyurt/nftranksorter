@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/card_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Kapak -->
+        <ImageView
+            android:id="@+id/imgCollectionCover"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:scaleType="centerCrop"
+            android:background="@android:color/darker_gray" />
+
+        <!-- İsim + çöp kutusu aynı satırda -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/txtCollectionName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Collection Name"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/text_primary"/>
+
+            <ImageView
+                android:id="@+id/btnDeleteCollection"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:src="@drawable/baseline_delete_24" />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/txtCollectionDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My NFT Collection"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="2dp"/>
+
+        <!-- Alt bilgi (NFT sayısı) -->
+        <TextView
+            android:id="@+id/txtCollectionInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3 NFT"
+            android:textSize="14sp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:textColor="@color/text_secondary"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

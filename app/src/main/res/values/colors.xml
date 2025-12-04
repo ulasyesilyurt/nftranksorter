@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- Ana renkler -->
+    <color name="colorPrimary">#3B82F6</color>          <!-- Canlı mavi -->
+    <color name="colorPrimaryDark">#2563EB</color>      <!-- Bir tık koyusu -->
+    <color name="colorAccent">#2563EB</color>           <!-- Buton vurgusu -->
+
+    <!-- Arka plan ve kart -->
+    <color name="background_light">#F1F5F9</color>      <!-- Açık gri arka plan -->
+    <color name="card_bg">#FFFFFF</color>               <!-- Kartlar için beyaz -->
+
+    <!-- Yazılar -->
+    <color name="text_primary">#1E293B</color>          <!-- Koyu metin -->
+    <color name="text_secondary">#64748B</color>        <!-- Açık gri metin -->
+
+    <!-- İstersen buton text için -->
+    <color name="on_primary">#FFFFFF</color>            <!-- Mavi üzerinde beyaz yazı -->
+</resources>
