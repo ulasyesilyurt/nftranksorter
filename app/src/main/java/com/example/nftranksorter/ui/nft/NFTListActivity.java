@@ -42,8 +42,6 @@ public class NFTListActivity extends AppCompatActivity {
     private List<NFT> nftList = new ArrayList<>();
     private List<NFT> originalList = new ArrayList<>();
     private NFTAdapter adapter;
-
-    // Yenileme için field'lar
     private CollectionDatabase collectionDb;
     private NFTDatabase nftDb;
     private String collectionName;
@@ -99,7 +97,6 @@ public class NFTListActivity extends AppCompatActivity {
         });
     }
 
-    // Toolbar geri tuşu için
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
@@ -124,7 +121,6 @@ public class NFTListActivity extends AppCompatActivity {
             }
         }
 
-        // Orijinal liste de güncellensin ki sort/reset doğru çalışsın
         originalList.clear();
         originalList.addAll(nftList);
 

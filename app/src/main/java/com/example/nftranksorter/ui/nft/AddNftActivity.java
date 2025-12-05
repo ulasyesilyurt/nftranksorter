@@ -61,24 +61,19 @@ public class AddNftActivity extends AppCompatActivity {
         Field[] drawables = R.drawable.class.getFields();
         for (Field f : drawables) {
             String name = f.getName();
-            // Sadece "nft" ile başlayan drawable'ları ekle (örn: nft1, nft_dog, nft_rare3)
+            // Sadece "nft" ile başlayan drawable'ları ekle
             if (name.startsWith("nft")) {
                 imageNames.add(name);
             }
         }
 
-        // --- Mevcut NFT'lerde kullanılan görselleri ele ---
+        // Mevcut NFT'lerde kullanılan görselleri ele
         CollectionDatabase collectionDbForFilter = new CollectionDatabase(this);
         NFTDatabase nftDbForFilter = new NFTDatabase(this, collectionDbForFilter);
 
-        // Bu koleksiyondaki NFT'lerin kullandığı image isimlerini toplayalım
-        // Eğer TÜM projede kullanılanları elemek istersen collectionName'e göre filtreleme yapmadan da gidebiliriz.
         List<String> usedImages = new ArrayList<>();
         for (com.example.nftranksorter.model.NFT nft : nftDbForFilter.getAllNFTs()) {
 
-            // Eğer sadece BU koleksiyondaki kullanımları elemek istersen:
-            // ilgili koleksiyona ait mi diye bakabilirsin
-            // ama şu an basit haliyle tüm NFT'lerde kullanılan her image'i eliyoruz.
 
             String path = nft.getImagePatch();   // örn: "nft1.png"
             if (path != null && !path.isEmpty()) {
@@ -90,12 +85,10 @@ public class AddNftActivity extends AppCompatActivity {
                 }
             }
         }
-        // imageNames listesinden kullanılanları çıkar
         imageNames.removeIf(usedImages::contains);
 
         if (imageNames.isEmpty()) {
-            // Hiç nft* resmi yoksa kullanıcıya söyle
-            imageNames.add("nft1"); // fallback, projede en az bir tane nft1.png olduğunu varsayalım
+            imageNames.add("nft1");
         }
 
         // Spinner'a bağla

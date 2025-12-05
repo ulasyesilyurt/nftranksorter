@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NFTRankSorter">
 
-        <!-- ⭐ Artık LAUNCHER olan SplashActivity -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -22,12 +21,10 @@
             </intent-filter>
         </activity>
 
-        <!-- MainActivity artık normal activity (istersen hiç kullanmayabilirsin bile) -->
         <activity
             android:name=".MainActivity"
             android:exported="true" />
 
-        <!-- Koleksiyon listesi: Splash'ten Intent ile açılacak -->
         <activity
             android:name=".ui.collections.CollectionListActivity"
             android:exported="true" />

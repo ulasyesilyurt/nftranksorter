@@ -29,7 +29,7 @@ public class CollectionListActivity extends AppCompatActivity {
     private List<Collection> collectionList = new ArrayList<>();
 
     private CollectionDatabase collectionDb;
-    private NFTDatabase nftDb;  // silerken kullanacağız
+    private NFTDatabase nftDb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +62,7 @@ public class CollectionListActivity extends AppCompatActivity {
 
             @Override
             public void onCollectionDelete(Collection c) {
-                // Çöp kutusuna tıklanınca silme diyaloğu
+                // Çöp kutusuna tıklanınca silme diyalogu
                 showDeleteDialog(c);
             }
         });
