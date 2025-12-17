@@ -29,7 +29,7 @@ The application calculates rarity using the statistical **Sum of Rarity** method
 - For each trait, the application determines how many NFTs in the collection share that specific value.
 - The rarity of a single trait is calculated as:
 
-1 / (Number_of_NFTs_with_Trait / Total_NFTs)
+  1 / (Number_of_NFTs_with_Trait / Total_NFTs)
 
 - The final **Rarity Score** of an NFT is the sum of all its individual trait rarities.
 
