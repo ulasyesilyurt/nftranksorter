@@ -62,6 +62,21 @@ To handle large collections efficiently, the project utilizes sorting algorithms
 
 ---
 
+## Image & Resource Usage
+
+To display images for NFTs and collections, image files must be added to the `res/drawable` directory following specific naming rules.
+
+### Naming Rules
+- **NFT Images**: Filenames must start with `nft` (e.g., `nft1.png`, `nft_blue_cat.png`)
+- **Collection Images**: Filenames must start with `col_` (e.g., `col_dogs.png`, `col_pixel_art.png`)
+
+### Adding New Images
+1. Copy the image file PNG into the `app/src/main/res/drawable/` directory.
+2. Ensure the filename follows the required prefix rules.
+3. When adding a new NFT or collection through the app interface, enter the filename **without the file extension** into the image path field.
+
+---
+
 ## Installation
 
 1. Clone the repository:
