@@ -48,8 +48,8 @@ To handle large collections efficiently, the project utilizes sorting algorithms
 
 - model/ -> Data entities such as NFT, Collection, and Trait
 - service/ -> Core logic for rarity calculation and sorting algorithms
-data/ -> Local database handlers for NFT and collection storage
-ui/ -> Android Activities and Adapters for the user interface
+- data/ -> Local database handlers for NFT and collection storage
+- ui/ -> Android Activities and Adapters for the user interface
 
 ---
 
